@@ -1,101 +1,88 @@
-<!-- recordar agregarle boton de cambio de idioma en/es -->
-
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Mi Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
-	<script
-      src="https://kit.fontawesome.com/721c7eae16.js"
-      crossorigin="anonymous"
-    ></script>
+	<script src="https://kit.fontawesome.com/721c7eae16.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
-		<h1>ALAN MANUEL GONZALEZ</h1>
-        <h2>Full Stack Developer</h2>
-		<p>Descripción breve de mis habilidades y experiencia</p>
-	</header>
+<header>
+	<h1>ALAN MANUEL GONZALEZ</h1>
+	<h2>Backend Developer</h2>
+	<p>Hola, mi nombre es Alan, estudiante de Licenciatura en Informatica y apasionado por el desarrollo de software. Me encuentro en la busqueda de oportunidades en el sector de TI para iniciar mi carrera profesional.
+		Tengo experiencia trabajando con diferentes tecnologias, especialmente en Java y Python. Siempre estoy en constante aprendizaje de nuevos lenguajes de programacion y desarrollo de aplicaciones y servicios. Tambien estoy estudiando ingles y actualmente tengo un nivel A2.</p>
+</header>
 
-	<main>
-	<section>
-		<article class="avatar">
-			<img src="img/Alan_avatar.png" alt="icono 3">
-		</article>
-	</section>
-		<div class="iconos">
-	  <a href="mailto:alan_manuel_gonzalez@hotmail.com" class="tooltip">
-		<i class="fa fa-solid fa-envelope fa-2x"></i>
-		<span class="tooltiptext"></span>
-	  </a>
-	  
-	  <a href="https://www.linkedin.com/in/alangonzm"
-		class="tooltip"
-		target="_blank"
-		rel="noreferrer noopener"
-	  >
-		<i class="fa fa-brands fa-linkedin fa-2x"></i>
-		<span class="tooltiptext"></span>
-	  </a>
-	  <a href="https://github.com/alanium"
-		class="tooltip"
-		target="_blank"
-		rel="noreferrer noopener"
-	  >
-		<i class="fa fa-brands fa-github fa-2x"></i>
-		<span class="tooltiptext"></span>
-	  </a>
-	  <a
-		href="cv.pdf"
-		class="tooltip"
-		target="_blank"
-		rel="noreferrer noopener"
-	  >
-		<i class="fa fa-file-pdf fa-2x"></i>
-		<span class="tooltiptext"></span>
-	  </a>
+<main>
+	<div class="iconos">
+		<a href="mailto:alan_manuel_gonzalez@hotmail.com" class="tooltip">
+			<i class="fa fa-solid fa-envelope fa-2x"></i>
+			<span class="tooltiptext"></span>
+		</a>
+
+		<a href="https://www.linkedin.com/in/alangonzm" class="tooltip" target="_blank" rel="noreferrer noopener">
+			<i class="fa fa-brands fa-linkedin fa-2x"></i>
+			<span class="tooltiptext"></span>
+		</a>
+
+		<a href="https://github.com/alanium" class="tooltip" target="_blank" rel="noreferrer noopener">
+			<i class="fa fa-brands fa-github fa-2x"></i>
+			<span class="tooltiptext"></span>
+		</a>
+
+		<a href="cv.pdf" class="tooltip" target="_blank" rel="noreferrer noopener">
+			<i class="fa fa-file-pdf fa-2x"></i>
+			<span class="tooltiptext"></span>
+		</a>
 	</div>
 
-		<section class="herramientas">
-			<hr>
-			<h3>HERRAMIENTAS</h3>
-			<article>
-				<img src="icono" alt="icono 1">
-				<p>Python</p>
-			</article>
-			<article>
-				<img src="icono" alt="icono 2">
-				<p>Java</p>
-			</article>
-			<article>
-				<img src="icono" alt="icono 3">
-				<p>JavaScript</p>
-			</article>
-			<article>
-				<img src="icono" alt="icono 4">
-				<p>HTML</p>
-			</article>
-			<hr>
-		</section>
-		
-		<section class="proyectos">
-			<hr>
-			<h3>PROYECTOS</h3>
-			<article>
-				<img src="img/img.jpg" alt="icono 1">
-				<p>Proyecto 1</p>
-			</article>
-			<article>
-				<img src="img/img.jpg" alt="icono 2">
-				<p>Proyecto 2</p>
-			</article>
-			<hr>
-		</section>
+	<section class="herramientas">
+		<hr>
+		<h3>HERRAMIENTAS</h3>
+		<hr>
+		<article>
+			<i class="fab fa-python fa-3x"></i>
+			<p>Python</p>
+		</article>
+		<article>
+			<i class="fab fa-java fa-3x"></i>
+			<p>Java</p>
+		</article>
+		<article>
+			<i class="fab fa-js fa-3x"></i>
+			<p>JavaScript</p>
+		</article>
+		<article>
+			<i class="fab fa-html5 fa-3x"></i>
+			<p>HTML</p>
+		</article>
+		<article>
+			<i class="fas fa-database fa-3x"></i>
+			<p>SQL</p>
+		</article>
+		<article>
+			<i class="fas fa-database fa-3x"></i>
+			<p>SQLite3</p>
+		</article>
+	</section>
 
-	</main>
+	<section class="proyectos">
+		<hr>
+		<h3>PROYECTOS</h3>
+		<hr>
+		<article>
+			<h4>iForgotMyExpenses</h4>
+			<p>Esta aplicación para Android te permite llevar un registro de tus cuentas personales y gastos mensuales. Funciona como un bloc de notas donde puedes ingresar gastos con su descripción, y la app calcula el total gastado en el mes. Cada mes se reinicia, pero puedes acceder al historial de meses anteriores a través del botón "Historial".</p>
+			<a href="https://github.com/alanium/iForgotMyExpenses" target="_blank">
+				<div class="imagen-contenedor">
+					<img src="img/ss.png" alt="icono 1">
+				</div>
+			</a>
+		</article>
+		<hr>
+	</section>
 
+</main>
 </body>
 </html>
-
-
-

@@ -6,13 +6,13 @@ body {
     height: 100%;
     margin: 0;
     background-attachment: fixed;
-	font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
     color: white;
 }
 
 header {
-	text-align: center;
-	color: white;
+    text-align: center;
+    color: white;
 }
 
 header h1 {
@@ -25,6 +25,10 @@ header h2 {
 
 header p {
     font-size: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    text-justify : inter-word;
 }
 
 section {
@@ -34,13 +38,8 @@ section {
 }
 
 article {
-	display: inline-block;
-	margin: 20px;
-}
-
-img {
-	width: 500px;
-	height: 350px;
+    display: inline-block;
+    margin: 20px;
 }
 
 .iconos {
@@ -67,3 +66,38 @@ img {
     font-size: 30px;
     color: rgb(255, 255, 255);
 }
+
+.proyectos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.proyectos article {
+    display: flex; /* Cambia el valor a "flex" */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 20px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.proyectos article h4 {
+    margin-top: 10px; /* Margen superior para el título */
+}
+
+.imagen-contenedor {
+    width: 200px; /* Ajusta el tamaño de la imagen-contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.proyectos article img {
+    width: 100%;
+    height: auto;
+}
+
+.proyectos article p {
+    margin-top: 10px; /* Margen superior para el texto */
+    text-align: justify;
+    text-justify : inter-word;
+}
+
+
