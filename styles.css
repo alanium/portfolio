@@ -73,20 +73,20 @@ article {
 }
 
 .proyectos article {
-    display: flex; /* Cambia el valor a "flex" */
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
-    text-align: center; /* Alinea el texto al centro */
+    text-align: center;
 }
 
 .proyectos article h4 {
-    margin-top: 10px; /* Margen superior para el título */
+    margin-top: 10px;
 }
 
 .imagen-contenedor {
-    width: 200px; /* Ajusta el tamaño de la imagen-contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
+    width: 200px;
+    height: auto;
 }
 
 .proyectos article img {
@@ -95,7 +95,7 @@ article {
 }
 
 .proyectos article p {
-    margin-top: 10px; /* Margen superior para el texto */
+    margin-top: 10px; 
     text-align: justify;
     text-justify : inter-word;
 }
