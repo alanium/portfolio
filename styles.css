@@ -29,6 +29,7 @@ header p {
     max-width: 800px;
     text-align: justify;
     text-justify : inter-word;
+    margin-bottom: 0px;
 }
 
 section {
@@ -45,8 +46,8 @@ article {
 .iconos {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .iconos a {
@@ -98,6 +99,17 @@ article {
     margin-top: 10px; 
     text-align: justify;
     text-justify : inter-word;
+}
+
+.section-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
 
