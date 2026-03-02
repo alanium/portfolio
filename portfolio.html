@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan M. Gonzalez | Python Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AMG<span class="logo-dot">.</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hola, soy</p>
+                <h1 class="hero-title">Alan M. Gonzalez</h1>
+                <p class="hero-description">Python Backend Developer & Cloud Architect</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Contáctame</a>
+                    <a href="#projects" class="btn btn-secondary">Ver Proyectos</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/alanium" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alangonzm/" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:alan.mg.dev@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">main.py</span>
+                    </div>
+                    <div class="code-content">
+                        <p><span class="keyword">class</span> <span class="class-name">BackendDev</span>:</p>
+                        <p class="indent"><span class="keyword">def</span> <span class="function">__init__</span>(self, name):</p>
+                        <p class="indent2">self.name = name</p>
+                        <p class="indent2">self.bugs = 3</p>
+                        <p class="indent2">self.coffee = <span class="string">"ready"</span></p>
+                        <p></p>
+                        <p class="indent"><span class="keyword">def</span> <span class="function">deploy</span>(self):</p>
+                        <p class="indent2"><span class="keyword">if</span> self.bugs &gt; 0:</p>
+                        <p class="indent3">self.bugs -= 1</p>
+                        <p class="indent3"><span class="keyword">return</span> <span class="string">"Fixing one more bug before deploy..."</span></p>
+                        <p class="indent2"><span class="keyword">return</span> <span class="string">"Deploy successful. Monitoring like a hawk."</span></p>
+                        <p></p>
+                        <p>me = BackendDev(<span class="string">"Alan"</span>)</p>
+                        <p>print(me.deploy())</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-placeholder">
+                            <span class="profile-initials">AMG</span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Ingeniero en Informática</h3>
+                            <p>Desarrollador Backend especializado en Python con experiencia en arquitecturas escalables, microservicios y APIs RESTful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Tecnologías dominadas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Compromiso</div>
+                        </div>
+                    </div>
+                    <p class="about-text">Mi enfoque combina sólidos conocimientos técnicos con una mentalidad orientada a resultados, enfocándome en crear sistemas eficientes y mantenibles.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">💼</span>
+                            <div class="detail-content">
+                                <h4>Experto en Python</h4>
+                                <p>Arquitecturas escalables y sistemas distribuidos</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">☁️</span>
+                            <div class="detail-content">
+                                <h4>Cloud Architect</h4>
+                                <p>Implementación en AWS con microservicios</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🚀</span>
+                            <div class="detail-content">
+                                <h4>Performance Optimization</h4>
+                                <p>Optimización SQL y arquitectura de bases de datos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia Laboral</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">Junio 2026 – Presente</div>
+                        <h3>Python Developer</h3>
+                        <p class="timeline-company">Credencial Payments</p>
+                        <p class="timeline-location">Buenos Aires, Argentina</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item">• Integración en equipos ágiles con clientes</div>
+                            <div class="achievement-item">• Diseño e implementación de APIs RESTful</div>
+                            <div class="achievement-item">• Desarrollo de microservicios en AWS</div>
+                            <div class="achievement-item">• Transformación de maquetas en aplicaciones</div>
+                            <div class="achievement-item">• Gestión de bases de datos SQL/NoSQL</div>
+                            <div class="achievement-item">• Optimización de consultas SQL complejas</div>
+                            <div class="achievement-item">• Integración de APIs de terceros</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">Marzo 2023 – Abril 2026</div>
+                        <h3>Software Developer</h3>
+                        <p class="timeline-company">Contempo Construction TX</p>
+                        <p class="timeline-location">Los Angeles, USA</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item">• Liderazgo de proyectos en Python y Java</div>
+                            <div class="achievement-item">• Desarrollo de interfaces React/Vite</div>
+                            <div class="achievement-item">• Implementación de soluciones Flutter</div>
+                            <div class="achievement-item">• Utilización de AWS y Firebase</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">Marzo 2022 – Abril 2023</div>
+                        <h3>Inspector de Calidad</h3>
+                        <p class="timeline-company">Cimet Optel</p>
+                        <p class="timeline-location">Argentina</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item">• Análisis de integridad física en cables</div>
+                            <div class="achievement-item">• Control de parámetros con SAP MM</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">SAP MM</span>
+                            <span class="tag">Quality Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-date">Abril 2016 – Marzo 2022</div>
+                        <h3>Técnico en Mantenimiento/Sistemas</h3>
+                        <p class="timeline-company">Guerrero e Hijos Ingeniería</p>
+                        <p class="timeline-location">Argentina</p>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item">• Instalación y mantenimiento de sistemas eléctricos</div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span class="tag">Sistemas Eléctricos</span>
+                            <span class="tag">Mantenimiento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades & Tecnologías</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">GO</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚙️</span>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Nuxt</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🗄️</span>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">☁️</span>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS (S3, Lambda, SNS, SQS)</span>
+                        <span class="skill-tag">Event Bridge</span>
+                        <span class="skill-tag">Cognito</span>
+                        <span class="skill-tag">Elastic Beanstalk</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">Loki</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🧪</span>
+                        <h3>Testing</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unit Testing</span>
+                        <span class="skill-tag">Integration Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🛠️</span>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">SAP MM</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">🌍</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Español (Nativo)</span>
+                        <span class="skill-tag">Inglés (B2)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">🔐</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Payment Gateway API</h3>
+                        <p>API RESTful completa para procesamiento de pagos con integración de múltiples métodos de pago.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django REST Framework</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">📊</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Dashboard interactivo para visualización de datos con gráficos en tiempo real y generación de reportes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">📱</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mobile App Integration</h3>
+                        <p>Integración completa entre backend Python y aplicación móvil Flutter con sincronización en tiempo real.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">☁️</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Cloud Microservices</h3>
+                        <p>Arquitectura de microservicios en AWS con implementación de patrones como Circuit Breaker y Rate Limiting.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">API Gateway</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Hablemos</h3>
+                    <p>Estoy disponible para oportunidades de trabajo freelance o a tiempo completo. Si tienes un proyecto en mente o simplemente quieres conectarte, no dudes en contactarme.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <p>alan.mg.dev@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <p>(+54) 11 6947 3198</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <p>Buenos Aires, Argentina</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🌐</span>
+                            <p>LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/alanium" class="contact-social-link" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alangonzm/" class="contact-social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:alan.mg.dev@gmail.com" class="contact-social-link" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="footer-logo-text">AMG<span class="logo-dot">.</span></span>
+                    <p>Python Backend Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Inicio</a>
+                    <a href="#about" class="footer-link">Sobre Mí</a>
+                    <a href="#experience" class="footer-link">Experiencia</a>
+                    <a href="#skills" class="footer-link">Habilidades</a>
+                    <a href="#projects" class="footer-link">Proyectos</a>
+                    <a href="#contact" class="footer-link">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alan M. Gonzalez. Todos los derechos reservados.</p>
+                <p class="footer-text">Desarrollado con ❤️ usando Python, HTML, CSS y JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
