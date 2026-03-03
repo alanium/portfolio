@@ -465,6 +465,17 @@ body {
     z-index: 1;
 }
 
+.profile-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.24) 45%, transparent 70%);
+    transform: translateX(-120%);
+    animation: shimmer 3.2s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .profile-photo {
     position: absolute;
     left: 50%;
@@ -475,7 +486,7 @@ body {
     object-fit: contain;
     object-position: center bottom;
     display: block;
-    z-index: 2;
+    z-index: 3;
 }
 
 .profile-watermark {
@@ -490,7 +501,7 @@ body {
     font-weight: 800;
     letter-spacing: 0.1em;
     color: rgba(255, 255, 255, 0.34);
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
 }
 
