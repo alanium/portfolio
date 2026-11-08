@@ -1326,3 +1326,42 @@ body {
         row-gap: 0.5rem;
     }
 }
+
+
+/* Logos reales de las apps en las tarjetas de proyectos */
+.project-placeholder.has-logo {
+    background: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.project-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Iconos SVG (reemplazan a los emojis) */
+.project-icon svg,
+.category-icon svg,
+.detail-icon svg,
+.contact-icon svg {
+    display: block;
+}
+
+.detail-icon {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--primary-color);
+}
+
+.category-icon {
+    color: var(--primary-color);
+    display: inline-flex;
+}
+
+.contact-icon {
+    display: inline-flex;
+    justify-content: center;
+}
