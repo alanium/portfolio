@@ -843,9 +843,53 @@ body {
     flex-direction: column;
 }
 
+.project-card {
+    position: relative;
+    --mx: 50%;
+    --my: 50%;
+}
+
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg), 0 20px 50px rgba(102, 126, 234, 0.18);
+}
+
+/* Brillo interior que sigue al cursor */
+.project-card::before,
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.project-card::before {
+    background: radial-gradient(450px circle at var(--mx) var(--my), rgba(118, 75, 162, 0.10), rgba(102, 126, 234, 0.07) 40%, transparent 70%);
+}
+
+/* Borde degradado que se enciende donde esta el cursor */
+.project-card::after {
+    padding: 2px;
+    background: radial-gradient(260px circle at var(--mx) var(--my), #667eea, #764ba2 45%, transparent 75%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+.project-card:hover::before,
+.project-card:hover::after {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .project-card::before,
+    .project-card::after {
+        display: none;
+    }
 }
 
 .project-image {
