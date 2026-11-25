@@ -202,6 +202,74 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(stat);
     });
 
+    // Duracion de cada experiencia (ej: "2 años 4 meses") junto a la fecha
+    (function() {
+        const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        function parse(txt) {
+            txt = txt.trim().toLowerCase();
+            if (txt === 'presente') {
+                const n = new Date();
+                return n.getFullYear() * 12 + n.getMonth();
+            }
+            const m = txt.match(/^([a-záéíóú]+)\s+(\d{4})$/);
+            if (!m || meses.indexOf(m[1]) < 0) return null;
+            return parseInt(m[2], 10) * 12 + meses.indexOf(m[1]);
+        }
+        document.querySelectorAll('.timeline-date').forEach(el => {
+            const parts = el.textContent.split(/\s[-–]\s/);
+            if (parts.length !== 2) return;
+            const a = parse(parts[0]), b = parse(parts[1]);
+            if (a === null || b === null || b < a) return;
+            const total = b - a + 1;
+            const y = Math.floor(total / 12), mo = total % 12;
+            const out = [];
+            if (y) out.push(y + (y === 1 ? ' año' : ' años'));
+            if (mo) out.push(mo + (mo === 1 ? ' mes' : ' meses'));
+            const span = document.createElement('span');
+            span.className = 'timeline-duration';
+            span.textContent = out.join(' ');
+            el.appendChild(span);
+        });
+    })();
+
+    // Descripcion colapsable en mobile
+    const mobileMQ = window.matchMedia('(max-width: 799px)');
+    projectCards.forEach(card => {
+        const desc = card.querySelector('.project-content p');
+        if (!desc) return;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'project-toggle';
+        btn.textContent = 'Ver más';
+        btn.setAttribute('aria-expanded', 'false');
+        desc.after(btn);
+        desc.classList.add('is-collapsed');
+
+        btn.addEventListener('click', function() {
+            const collapsed = desc.classList.toggle('is-collapsed');
+            btn.textContent = collapsed ? 'Ver más' : 'Ver menos';
+            btn.setAttribute('aria-expanded', String(!collapsed));
+        });
+    });
+
+    function updateToggles() {
+        projectCards.forEach(card => {
+            const desc = card.querySelector('.project-content p');
+            const btn = card.querySelector('.project-toggle');
+            if (!desc || !btn) return;
+            if (!mobileMQ.matches) { btn.hidden = true; return; }
+            // medir con la descripcion colapsada
+            const wasCollapsed = desc.classList.contains('is-collapsed');
+            desc.classList.add('is-collapsed');
+            const overflows = desc.scrollHeight > desc.clientHeight + 1;
+            if (!wasCollapsed) desc.classList.remove('is-collapsed');
+            btn.hidden = !overflows && wasCollapsed;
+        });
+    }
+    updateToggles();
+    window.addEventListener('resize', updateToggles);
+    window.addEventListener('load', updateToggles);
+
     // Spotlight: pasar la posicion del mouse al CSS
     projectCards.forEach(card => {
         card.addEventListener('pointermove', function(e) {
